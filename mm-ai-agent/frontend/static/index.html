@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mega Market AI Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="mega-market-logo.png" alt="Mega Market" class="logo-img">
+                </div>
+                <div class="title-container">
+                    <h1 class="heading">Mega Market Assistant</h1>
+                    <h4 class="sub-heading">Hỏi tôi về sản phẩm, đơn hàng hoặc hỗ trợ khác!</h4>
+                </div>
+            </div>
+            <div class="connection-status online">
+                <span class="status-dot"></span>
+                <span class="status-text">Đang hoạt động</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div id="chat-window" class="chats-container">
+                <!-- Initial welcome message -->
+                <div class="bot-message">
+                    <div class="message-avatar">
+                        <img src="mega-market-logo.png" alt="Mega Market" class="bot-logo">
+                    </div>
+                    <div class="message-content">
+                        <div class="message-text">
+                            Xin chào! Tôi là trợ lý AI của Mega Market. Tôi có thể giúp bạn tìm kiếm sản phẩm, kiểm tra đơn hàng hoặc giải đáp các thắc mắc của bạn. Bạn cần hỗ trợ gì hôm nay?
+                        </div>
+                        <div class="quick-actions">
+                            <button class="quick-action-btn" data-action="Tìm sản phẩm">Tìm sản phẩm</button>
+                            <button class="quick-action-btn" data-action="Kiểm tra đơn hàng">Kiểm tra đơn hàng</button>
+                            <button class="quick-action-btn" data-action="Hỗ trợ">Cần hỗ trợ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="product-container" class="response-container product-container">
+                <!-- Product results will show here -->
+            </div>
+
+            <div id="order-container" class="response-container order-container">
+                <!-- Order info will show here -->
+            </div>
+        </main>
+
+        <div class="prompt-container">
+            <form action="#" class="prompt-form">
+                <div class="input-wrapper">
+                    <input id="chat-input" type="text" placeholder="Nhập tin nhắn..." class="prompt-input" required />
+                    <button type="button" class="clear-btn" id="clear-input">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <button id="send-button" type="button" class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+            <div class="typing-indicator" id="typing-indicator">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
